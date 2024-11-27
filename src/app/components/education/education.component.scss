@@ -1,0 +1,97 @@
+.education-grid {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.education-card {
+  background-color: var(--card-bg);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px var(--shadow-color);
+  }
+
+  .education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+
+    h3 {
+      color: var(--primary-color);
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .year {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      padding: 0.25rem 0.5rem;
+      background-color: var(--surface-color);
+      border-radius: 0.25rem;
+    }
+  }
+
+  .institution {
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .location {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .achievements {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      color: var(--text-color);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1.25rem;
+      position: relative;
+
+      &:before {
+        content: "•";
+        color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    padding: 1.25rem;
+
+    .education-header {
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .year {
+        align-self: flex-start;
+      }
+    }
+  }
+}

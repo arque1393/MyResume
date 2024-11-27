@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ThemeService } from './services/theme.service';
@@ -17,6 +18,7 @@ import { ThemeService } from './services/theme.service';
     HeaderComponent,
     AboutComponent,
     SkillsComponent,
+    EducationComponent,
     ExperienceComponent,
     ProjectsComponent
   ],
@@ -26,6 +28,7 @@ import { ThemeService } from './services/theme.service';
       <main class="main-content">
         <app-about></app-about>
         <app-skills></app-skills>
+        <app-education></app-education>
         <app-experience></app-experience>
         <app-projects></app-projects>
       </main>

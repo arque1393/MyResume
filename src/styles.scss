@@ -18,6 +18,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 html {
@@ -42,9 +43,15 @@ html {
 .card {
   background-color: var(--card-bg);
   border-radius: 1rem;
-  padding: 2rem;
+  padding: 1.25rem;
   box-shadow: 0 4px 6px var(--shadow-color);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+  }
 
   &:hover {
     transform: translateY(-5px);
@@ -55,11 +62,19 @@ html {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+
+  @media (max-width: 768px) {
+    padding: 0 0.75rem;
+  }
 }
 
 .section {
-  padding: 5rem 0;
+  padding: 3rem 1rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
 }
 
 // Animations
@@ -76,4 +91,40 @@ html {
 
 .animate-fade-in {
   animation: fadeIn 0.6s ease forwards;
+}
+
+// Global spacing adjustments
+ul, ol {
+  padding-left: 1.25rem;
+  margin: 0.75rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem;
+
+  @media (max-width: 768px) {
+    margin: 0 0 0.75rem;
+  }
+}
+
+// Button padding
+.btn {
+  padding: 0.5rem 1rem;
+
+  &.btn-lg {
+    padding: 0.75rem 1.5rem;
+  }
+
+  &.btn-sm {
+    padding: 0.25rem 0.75rem;
+  }
+}
+
+// Grid adjustments
+.grid {
+  gap: 1.25rem;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+  }
 }

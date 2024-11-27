@@ -1,33 +1,37 @@
-// Light Theme
+// Light Theme (Default)
 :root {
-  --primary-color: #2563eb;
-  --primary-light: #60a5fa;
-  --primary-dark: #1d4ed8;
-  --background-color: #f8fafc;
-  --surface-color: #ffffff;
-  --text-color: #1e293b;
-  --text-light: #64748b;
-  --hover-color: #f1f5f9;
-  --border-color: #e2e8f0;
-  --shadow-color: rgba(0, 0, 0, 0.1);
+  --primary-color: #1e40af;     // Deeper blue
+  --primary-light: #3b82f6;     // Brighter blue
+  --primary-dark: #1e3a8a;      // Darkest blue
+  --background-color: #ffffff;   // Pure white
+  --surface-color: #f8fafc;     // Light gray
+  --surface-color-rgb: 248, 250, 252;
+  --text-color: #0f172a;        // Nearly black
+  --text-light: #475569;        // Darker gray
+  --hover-color: #e2e8f0;       // Medium gray
+  --border-color: #cbd5e1;      // Border gray
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --error-color: #dc2626;       // Error red
   --success-color: #22c55e;
   --card-bg: #ffffff;
 }
 
 // Dark Theme
 .dark-theme {
-  --primary-color: #60a5fa;
-  --primary-light: #93c5fd;
-  --primary-dark: #3b82f6;
-  --background-color: #0f172a;
-  --surface-color: #1e293b;
-  --text-color: #f1f5f9;
-  --text-light: #cbd5e1;
-  --hover-color: #334155;
-  --border-color: #334155;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --primary-color: #a855f7;     // Bright purple
+  --primary-light: #c084fc;     // Lighter purple
+  --primary-dark: #9333ea;      // Deep purple
+  --background-color: #0f0a1a;  // Very dark purple background
+  --surface-color: #1a1425;     // Dark purple surface
+  --surface-color-rgb: 26, 20, 37;
+  --text-color: #f8fafc;        // Nearly white
+  --text-light: #e2e8f0;        // Light gray
+  --hover-color: #2d2438;       // Lighter purple for hover
+  --border-color: #352c42;      // Border purple
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --error-color: #ef4444;       // Bright error red
   --success-color: #22c55e;
-  --card-bg: #1e293b;
+  --card-bg: #1a1425;          // Same as surface color
 }
 
 // Transitions
