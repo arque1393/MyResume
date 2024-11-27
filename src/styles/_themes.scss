@@ -1,0 +1,36 @@
+// Light Theme
+:root {
+  --primary-color: #2563eb;
+  --primary-light: #60a5fa;
+  --primary-dark: #1d4ed8;
+  --background-color: #f8fafc;
+  --surface-color: #ffffff;
+  --text-color: #1e293b;
+  --text-light: #64748b;
+  --hover-color: #f1f5f9;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --success-color: #22c55e;
+  --card-bg: #ffffff;
+}
+
+// Dark Theme
+.dark-theme {
+  --primary-color: #60a5fa;
+  --primary-light: #93c5fd;
+  --primary-dark: #3b82f6;
+  --background-color: #0f172a;
+  --surface-color: #1e293b;
+  --text-color: #f1f5f9;
+  --text-light: #cbd5e1;
+  --hover-color: #334155;
+  --border-color: #334155;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --success-color: #22c55e;
+  --card-bg: #1e293b;
+}
+
+// Transitions
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
