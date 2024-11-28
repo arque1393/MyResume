@@ -15,12 +15,12 @@ import { ThemeService } from '../../services/theme.service';
         </div>
         
         <div class="nav-links" [class.active]="isMenuOpen">
-          <a href="#about" (click)="closeMenu()">About</a>
-          <a href="#skills" (click)="closeMenu()">Skills</a>
-          <a href="#education" (click)="closeMenu()">Education</a>
-          <a href="#experience" (click)="closeMenu()">Experience</a>
-          <a href="#projects" (click)="closeMenu()">Projects</a>
-          <a href="#contact" (click)="closeMenu()">Contact</a>
+          <a href="#about" (click)="scrollToSection($event, 'about')">About</a>
+          <a href="#skills" (click)="scrollToSection($event, 'skills')">Skills</a>
+          <a href="#education" (click)="scrollToSection($event, 'education')">Education</a>
+          <a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a>
+          <a href="#projects" (click)="scrollToSection($event, 'projects')">Projects</a>
+          <a href="#contact" (click)="scrollToSection($event, 'contact')">Contact</a>
           
           <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'">
             <div class="toggle-track">
@@ -48,6 +48,8 @@ export class HeaderComponent {
   private touchStartX = 0;
   private touchEndX = 0;
   private isMobileView = window.innerWidth <= 768;
+  private readonly headerHeight = 60; // Fixed header height
+  private readonly mobileOffset = 20; // Additional offset for mobile
 
   constructor(private themeService: ThemeService) {
     this.themeService.isDarkTheme$.subscribe(
@@ -81,11 +83,33 @@ export class HeaderComponent {
 
   private handleSwipe() {
     const swipeDistance = this.touchStartX - this.touchEndX;
-    const threshold = 50; // minimum swipe distance to trigger menu
+    const threshold = 50;
 
-    if (swipeDistance > threshold && !this.isMenuOpen) {
-      this.openMenu();
+    if (!this.isMenuOpen) {
+      if (swipeDistance > threshold) {
+        this.openMenu();
+      }
+    } else {
+      if (swipeDistance < -threshold) {
+        this.closeMenu();
+      }
     }
+  }
+
+  scrollToSection(event: Event, sectionId: string) {
+    event.preventDefault();
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = this.isMobileView ? this.headerHeight + this.mobileOffset : this.headerHeight;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+    this.closeMenu();
   }
 
   toggleTheme() {
