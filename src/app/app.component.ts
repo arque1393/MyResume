@@ -7,6 +7,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { HobbiesComponent } from './components/hobbies/hobbies.component';
 import { ThemeService } from './services/theme.service';
 
 @Component({
@@ -20,7 +21,8 @@ import { ThemeService } from './services/theme.service';
     SkillsComponent,
     EducationComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    HobbiesComponent
   ],
   template: `
     <div [class.dark-theme]="isDarkTheme">
@@ -31,6 +33,7 @@ import { ThemeService } from './services/theme.service';
         <app-education></app-education>
         <app-experience></app-experience>
         <app-projects></app-projects>
+        <app-hobbies></app-hobbies>
       </main>
     </div>
   `,

@@ -20,7 +20,7 @@ import { ThemeService } from '../../services/theme.service';
           <a href="#education" (click)="scrollToSection($event, 'education')">Education</a>
           <a href="#experience" (click)="scrollToSection($event, 'experience')">Experience</a>
           <a href="#projects" (click)="scrollToSection($event, 'projects')">Projects</a>
-          <a href="#contact" (click)="scrollToSection($event, 'contact')">Contact</a>
+          <a href="#hobbies" (click)="scrollToSection($event, 'hobbies')">Hobbies</a>
           
           <button class="theme-toggle" (click)="toggleTheme()" [attr.aria-label]="isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'">
             <div class="toggle-track">
