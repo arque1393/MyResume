@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <section id="hobbies" class="section">
+    <section id="hobbies" class="section hobbies-section">
       <div class="container">
         <h2 class="section-title">Hobbies & Interests</h2>
         <div class="hobbies-grid">
@@ -50,6 +50,18 @@ import { CommonModule } from '@angular/common';
     </section>
   `,
   styles: [`
+    .hobbies-section {
+      padding: 4rem 0;
+      min-height: 100vh;
+      background-color: var(--background-color);
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+    }
+
     .hobbies-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -64,16 +76,41 @@ import { CommonModule } from '@angular/common';
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, var(--primary-color) 0%, transparent 400%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 1rem;
+      }
 
       &:hover {
         transform: translateY(-5px);
         box-shadow: 0 5px 15px var(--shadow-color);
+        
+        &::before {
+          opacity: 0.05;
+        }
+
+        i {
+          transform: scale(1.1);
+          color: var(--primary-color);
+        }
       }
 
       i {
         font-size: 2.5rem;
         color: var(--primary-color);
         margin-bottom: 1rem;
+        transition: all 0.3s ease;
       }
 
       h3 {
@@ -90,6 +127,10 @@ import { CommonModule } from '@angular/common';
     }
 
     @media (max-width: 768px) {
+      .hobbies-section {
+        padding: 3rem 0;
+      }
+      
       .hobbies-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 1rem;
@@ -97,6 +138,14 @@ import { CommonModule } from '@angular/common';
 
       .hobby-card {
         padding: 1.25rem;
+        
+        i {
+          font-size: 2rem;
+        }
+        
+        h3 {
+          font-size: 1.1rem;
+        }
       }
     }
   `]
