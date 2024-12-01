@@ -106,6 +106,15 @@ export class SkillsComponent {
       ]
     },
     {
+      name: 'Quantum Computing',
+      skills: [
+        { name: 'Python', level: 90 },
+        { name: 'Qiskit', level: 85 },
+        { name: 'IBM Quantum', level: 85 },
+        { name: 'Quantum Algorithms', level: 80 },
+      ]
+    },
+    {
       name: 'Other Tools',
       skills: [
         { name: 'Git' },

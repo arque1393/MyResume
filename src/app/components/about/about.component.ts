@@ -12,8 +12,8 @@ import { CommonModule } from '@angular/common';
           <h1>Aritra Ranjan Chowdhury</h1>
           <div class="contact-info">
             <p><i class="material-icons">phone</i> +91 6291584559</p>
-            <p><i class="material-icons">email</i> aritra1393</p>
-            <p><i class="material-icons">location_on</i> 19, Purbachal Pally, Bhadreswar, Hooghly, PIN: 712221, West Bengal, India</p>
+            <p><i class="material-icons">email</i> aritra1393&#64;gmail.com</p>
+            <p><i class="material-icons">location_on</i> 19, Purbachal Pally, Bhadreswar, Hooghly, West Bengal, PIN: 712221, India</p>
           </div>
           <div class="social-links">
             <a href="https://github.com/arque1393" target="_blank">

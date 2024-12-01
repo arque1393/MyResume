@@ -15,7 +15,7 @@ interface Project {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.scss'
+  styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent {
   projects: Project[] = [
@@ -94,6 +94,33 @@ export class ProjectsComponent {
       ],
       techStack: 'Python, Pyside6, Django, Django Rest Framework',
       githubLink: 'https://github.com/arque1393'
+    },
+    {
+      title: 'Quantum Computing Algorithms Implementation',
+      type: 'personal',
+      description: [
+        'Comprehensive implementation of fundamental quantum algorithms using Qiskit on IBM Quantum platform.',
+        'Implemented Quantum Teleportation protocol for secure state transfer between qubits.',
+        'Developed Deutsch–Jozsa algorithm for efficient function analysis.',
+        'Created Grover\'s Search implementation for quantum database searching.',
+        'Built Shor\'s Algorithm simulation for integer factorization.',
+        'Designed and implemented Variational Quantum Eigen-solver (VQE) for molecular simulation.'
+      ],
+      techStack: 'Python, Qiskit, IBM Quantum',
+      githubLink: '#'
+    },
+    {
+      title: 'Quantum Pong Game',
+      type: 'personal',
+      description: [
+        'A quantum version of the classic Pong game, demonstrating quantum computing principles in an interactive way.',
+        'Utilized quantum superposition for ball state representation.',
+        'Implemented quantum measurement mechanics for game interactions.',
+        'Created educational mode explaining quantum computing concepts through gameplay.',
+        'Integrated quantum randomness generator for enhanced gameplay mechanics.'
+      ],
+      techStack: 'Python, Qiskit, Pygame',
+      githubLink: '#'
     }
   ];
 }
