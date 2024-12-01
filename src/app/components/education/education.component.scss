@@ -14,7 +14,7 @@
   overflow: hidden;
 
   &:hover {
-    transform: translateY(-3px);
+    transform: scale(1.03);
     box-shadow: 0 4px 12px var(--shadow-color);
   }
 
